@@ -1,18 +1,14 @@
 :root {
-  --ink-0: #080a10; --ink-1: #0b0d14; --ink-2: #101522; --ink-3: #171b29;
-  --gold: #e5a93b; --gold-hi: #ffe0a0; --bronze: #b8793a; --ember: #ff6a2a;
-  --ice: #4fd0ff; --trap: #9b6bd6; --life: #2ecc71; --danger: #d9473f;
-  --paper: #f2ebdd; --muted: #9aa0b4; --line: rgba(229,169,59,.42);
-  --font-display: 'Cinzel', Georgia, serif; --font-ui: 'Rajdhani', sans-serif;
-  --space-1: 8px; --space-2: 12px; --space-3: 16px; --space-4: 24px; --space-5: 32px; --space-6: 48px;
-  --radius-sm: 4px; --radius-md: 8px; --shadow-inset: inset 0 0 0 1px rgba(255,221,147,.12), inset 0 0 24px rgba(0,0,0,.46);
-  --shadow-gold: 0 0 22px rgba(229,169,59,.22); --ease-relic: cubic-bezier(.2,.75,.2,1);
-  --z-base: 0; --z-art: 1; --z-panel: 10; --z-hud: 20; --z-modal: 40; --z-toast: 60;
+  --ink-0:#07090e; --ink-1:#0b0d14; --ink-2:#111623; --ink-3:#1a1f2e;
+  --gold:#e5a93b; --gold-hi:#ffe0a0; --bronze:#b8793a; --ember:#ff6a2a;
+  --ice:#4fd0ff; --trap:#9b6bd6; --life:#2ecc71; --danger:#d9473f;
+  --paper:#f2ebdd; --muted:#9aa0b4; --quiet:#697086; --line:rgba(229,169,59,.42);
+  --font-display:'Cinzel',Georgia,serif; --font-ui:'Rajdhani',sans-serif;
+  --text-xs:12px; --text-sm:14px; --text-md:16px; --text-lg:20px; --text-xl:28px; --text-2xl:42px;
+  --space-1:4px; --space-2:8px; --space-3:12px; --space-4:16px; --space-5:24px; --space-6:32px; --space-7:48px;
+  --radius-sm:4px; --radius-md:8px; --radius-lg:14px;
+  --shadow-inset:inset 0 0 0 1px rgba(255,221,147,.12),inset 0 0 24px rgba(0,0,0,.46);
+  --shadow-gold:0 0 22px rgba(229,169,59,.22); --shadow-danger:0 0 20px rgba(217,71,63,.45);
+  --ease-relic:cubic-bezier(.2,.75,.2,1); --z-art:1; --z-panel:10; --z-hud:20; --z-modal:40; --z-toast:60;
 }
-* { box-sizing: border-box; }
-html, body { margin: 0; min-width: 320px; background: var(--ink-1); color: var(--paper); }
-body { font-family: var(--font-ui); font-size: 18px; }
-button, input { font: inherit; }
-button { color: inherit; }
-:focus-visible { outline: 2px solid var(--gold-hi); outline-offset: 3px; }
-@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; } }
+*{box-sizing:border-box} html,body{margin:0;min-width:320px;background:var(--ink-1);color:var(--paper)} body{font-family:var(--font-ui);font-size:var(--text-md)} button,input,select{font:inherit} button{color:inherit}:focus-visible{outline:2px solid var(--gold-hi);outline-offset:3px}@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
