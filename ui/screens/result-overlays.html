@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ARCANOVA — Duel Results & Transitions</title><link rel="stylesheet" href="../tokens.css"><link rel="stylesheet" href="../components.css"><link rel="stylesheet" href="../result-overlays.css"></head>
+<body>
+<main class="results-stage" data-result="victory">
+  <img class="results-bg" src="../../assets/arenas/arena_default.webp" alt="Rune-lit duel arena">
+  <div class="backdrop"></div>
+  <header class="sheet-top"><img src="../../assets/branding/logo.webp" alt="Arcanova"><span>DUEL FEEDBACK / MOTION SHEET</span><div class="switches"><button data-result-state="victory">VICTORY</button><button data-result-state="defeat">DEFEAT</button><button data-result-state="campaign">CAMPAIGN</button></div></header>
+
+  <section class="result-overlay panel" aria-labelledby="result-title">
+    <div class="result-glow"></div><div class="result-kicker">DUEL COMPLETE / TURN <b>07</b></div><h1 id="result-title">VICTORY</h1>
+    <p class="reason victory-reason">Opponent LP reached 0</p><p class="reason defeat-reason">Deck out</p>
+    <div class="result-body"><div class="result-stats"><div><b>1,200</b><span>DAMAGE DEALT</span></div><div><b>18</b><span>CARDS PLAYED</span></div><div><b>4</b><span>MONSTERS DESTROYED</span></div></div>
+      <details class="event-log" open><summary><span>EVENT LOG</span><b>COLLAPSE</b></summary><ol><li><time>07:42</time> Inferno Wyrm attacked directly</li><li><time>07:31</time> Opponent LP reduced to 0</li><li><time>07:18</time> Magma Drake activated Ember Counter</li><li><time>06:54</time> You summoned Inferno Wyrm</li></ol></details></div>
+    <div class="result-actions"><button class="btn primary">REMATCH</button><button class="btn secondary campaign-only">CONTINUE</button><button class="btn secondary">BACK TO TITLE</button></div>
+  </section>
+
+  <section class="transition-shelf"><div class="shelf-label">TURN TRANSITIONS / ANIMATION NOTES</div><div class="transition-row"><button class="transition-banner your">YOUR TURN <small>420ms / cubic-bezier(.2,.8,.2,1)</small></button><button class="transition-banner opponent">OPPONENT&apos;S TURN <small>420ms / cubic-bezier(.2,.8,.2,1)</small></button><button class="transition-banner battle">BATTLE PHASE <small>360ms / ease-out</small></button><button class="transition-banner summon"><span>SUMMON ANNOUNCEMENT</span><b>INFERNO WYRM</b><small>800ms / ease-in-out</small></button></div></section>
+  <section class="toast-shelf"><div class="shelf-label">TOASTS / 220ms IN, 180ms OUT / ease-out</div><div class="toast-row"><div class="toast warning"><span>!</span>Normal summon already used</div><div class="toast danger"><span>×</span>Not enough tributes</div></div></section>
+  <p class="motion-notes">Result overlay: 600ms rise + opacity / ease-out · Victory glint: 1200ms linear loop · Defeat pulse: 900ms ease-in-out · Toasts dismiss after 3s.</p>
+</main><script>document.querySelectorAll('[data-result-state]').forEach(button=>button.addEventListener('click',()=>document.querySelector('.results-stage').dataset.result=button.dataset.resultState));</script></body></html>
