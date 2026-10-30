@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Arcanova — Deck Builder</title>
+  <link rel="stylesheet" href="../components.css" />
+  <link rel="stylesheet" href="../deck-builder.css" />
+</head>
+<body>
+  <main class="deck-stage">
+    <header class="deck-header">
+      <div class="brand-lockup"><img src="../../assets/branding/logo.webp" alt="Arcanova" /><span>DECK BUILDER</span></div>
+      <div class="state-switcher" aria-label="Deck states">
+        <button class="is-active" data-state="valid">VALID</button><button data-state="empty">EMPTY</button><button data-state="invalid">INVALID</button><button data-state="over">OVER LIMIT</button>
+      </div>
+      <button class="icon-btn" aria-label="Close deck builder">×</button>
+    </header>
+    <div class="deck-layout">
+      <aside class="filters panel-corner" aria-label="Collection filters">
+        <div class="panel-heading"><span>FILTERS</span><small>COLLECTION 64/108</small></div>
+        <label class="search"><span class="sr-only">Search cards</span><input placeholder="Search cards..." /><kbd>⌘ K</kbd></label>
+        <div class="filter-block"><div class="filter-label">DECK EMBLEM</div><div class="emblem-row">
+          <button class="emblem active" title="Dragon"><img src="../../assets/fx/summon_fire.webp" alt="Dragon" /></button><button class="emblem" title="Eagle"><img src="../../assets/fx/summon_lightning.webp" alt="Eagle" /></button><button class="emblem" title="Leviathan"><img src="../../assets/fx/summon_water.webp" alt="Leviathan" /></button><button class="emblem" title="Phoenix"><img src="../../assets/fx/summon_light.webp" alt="Phoenix" /></button><button class="emblem" title="Reaper"><img src="../../assets/fx/summon_dark.webp" alt="Reaper" /></button><button class="emblem" title="Wolf"><img src="../../assets/fx/summon_ice.webp" alt="Wolf" /></button>
+        </div></div>
+        <div class="filter-block"><div class="filter-label">CARD TYPE</div><div class="segmented"><button class="active">MONSTER</button><button>SPELL</button><button>TRAP</button></div></div>
+        <div class="filter-block"><div class="filter-label">RARITY</div><div class="chip-row"><button class="chip active">ALL</button><button class="chip common">COMMON</button><button class="chip rare">RARE</button><button class="chip ace">ACE</button></div></div>
+        <div class="filter-block"><div class="filter-label">ATTRIBUTE</div><div class="chip-row attributes"><button class="chip active">ALL</button><button class="chip"><img src="../../assets/ui/icons/fire.webp" alt="Fire" /></button><button class="chip"><img src="../../assets/ui/icons/water.webp" alt="Water" /></button><button class="chip"><img src="../../assets/ui/icons/light.webp" alt="Light" /></button><button class="chip"><img src="../../assets/ui/icons/dark.webp" alt="Dark" /></button></div></div>
+        <div class="filter-row"><label>Sort by<select><option>Recently acquired</option><option>Name A-Z</option><option>Rarity</option></select></label><label class="switch-label">Owned only <input class="switch" type="checkbox" checked /></label></div>
+        <div class="filter-footer"><span>Showing <b>24</b> of 64 cards</span><button class="text-btn">RESET</button></div>
+      </aside>
+
+      <section class="collection panel-corner" aria-label="Card collection">
+        <div class="panel-heading"><span>COLLECTION</span><small>DRAGON / MONSTER</small></div>
+        <div class="preview-card" id="preview"><div class="preview-copy">HOVER A CARD TO PREVIEW</div></div>
+        <div class="card-grid">
+          <article class="collection-card rare" draggable="true" data-name="Dragon Knight" data-copies="2"><img src="../../assets/cards/dragon/dragon_rare_dragon_knight.webp" alt="Dragon Knight" /><b>x2</b></article>
+          <article class="collection-card ace playable" draggable="true" data-name="Inferno Wyrm" data-copies="1"><img src="../../assets/cards/dragon/dragon_ace_inferno_wyrm.webp" alt="Inferno Wyrm" /><b>x1</b></article>
+          <article class="collection-card" draggable="true" data-name="Cinder Whelp" data-copies="3"><img src="../../assets/cards/dragon/dragon_common_cinder_whelp.webp" alt="Cinder Whelp" /><b>x3</b></article>
+          <article class="collection-card" draggable="true" data-name="Scale Guardian" data-copies="3"><img src="../../assets/cards/dragon/dragon_common_scale_guardian.webp" alt="Scale Guardian" /><b>x3</b></article>
+          <article class="collection-card rare" draggable="true" data-name="Magma Drake" data-copies="2"><img src="../../assets/cards/dragon/dragon_rare_magma_drake.webp" alt="Magma Drake" /><b>x2</b></article>
+          <article class="collection-card locked" title="Unlock in Campaign"><span>UNLOCK IN CAMPAIGN</span></article>
+          <article class="collection-card" draggable="true" data-name="Wyvern Raider" data-copies="3"><img src="../../assets/cards/dragon/dragon_common_wyvern_raider.webp" alt="Wyvern Raider" /><b>x3</b></article>
+          <article class="collection-card" draggable="true" data-name="Lava Golem" data-copies="1"><img src="../../assets/cards/dragon/dragon_common_lava_golem.webp" alt="Lava Golem" /><b>x1</b></article>
+          <article class="collection-card" draggable="true" data-name="Flame Sorcerer" data-copies="2"><img src="../../assets/cards/dragon/dragon_common_flame_sorcerer.webp" alt="Flame Sorcerer" /><b>x2</b></article>
+          <article class="collection-card" draggable="true" data-name="Forge Awakening" data-copies="2"><img src="../../assets/cards/dragon/dragon_spell_forge_awakening.webp" alt="Forge Awakening" /><b>x2</b></article>
+          <article class="collection-card" draggable="true" data-name="Magma Pit" data-copies="1"><img src="../../assets/cards/dragon/dragon_trap_magma_pit.webp" alt="Magma Pit" /><b>x1</b></article>
+          <article class="collection-card" draggable="true" data-name="Scorched Seal" data-copies="2"><img src="../../assets/cards/dragon/dragon_trap_scorched_seal.webp" alt="Scorched Seal" /><b>x2</b></article>
+        </div>
+      </section>
+
+      <aside class="deck-panel panel-corner" id="deckPanel" aria-label="Current deck">
+        <div class="panel-heading"><span>CURRENT DECK</span><button class="text-btn" id="savedDecks">SAVED DECKS <i>3</i></button></div>
+        <div class="deck-name"><input value="Ashen Ascendancy" aria-label="Deck name" /><strong id="deckCount">27 / 30</strong></div>
+        <div class="validation valid" id="validation"><span class="status-dot"></span><span>DECK READY FOR DUEL</span></div>
+        <div class="deck-list" id="deckList"><h3>MONSTERS <small>18</small></h3><div class="deck-row"><img src="../../assets/cards/dragon/dragon_rare_dragon_knight.webp" alt="" /><div><b>Dragon Knight</b><small>LV 6 · ATK 2400 / DEF 1800</small></div><button>-</button><span>2</span><button>+</button></div><div class="deck-row"><img src="../../assets/cards/dragon/dragon_ace_inferno_wyrm.webp" alt="" /><div><b>Inferno Wyrm</b><small>LV 8 · ATK 3000 / DEF 2500</small></div><button>-</button><span>1</span><button>+</button></div><div class="deck-row"><img src="../../assets/cards/dragon/dragon_common_cinder_whelp.webp" alt="" /><div><b>Cinder Whelp</b><small>LV 2 · ATK 900 / DEF 700</small></div><button>-</button><span>3</span><button>+</button></div><h3>SPELLS <small>6</small></h3><div class="deck-row"><img src="../../assets/cards/dragon/dragon_spell_forge_awakening.webp" alt="" /><div><b>Forge Awakening</b><small>Continuous spell</small></div><button>-</button><span>2</span><button>+</button></div><h3>TRAPS <small>3</small></h3><div class="deck-row"><img src="../../assets/cards/dragon/dragon_trap_magma_pit.webp" alt="" /><div><b>Magma Pit</b><small>Counter trap</small></div><button>-</button><span>1</span><button>+</button></div></div>
+        <div class="level-chart"><div class="chart-title">LEVEL DISTRIBUTION</div><div class="bars"><i style="height:28%"><b>1</b></i><i style="height:56%"><b>2</b></i><i style="height:85%"><b>3</b></i><i style="height:42%"><b>4</b></i><i style="height:68%"><b>5</b></i><i style="height:34%"><b>6+</b></i></div></div>
+        <div class="deck-actions"><button class="gold">SAVE</button><button>SAVE AS</button><button>LOAD</button><button>NEW</button><button>CLEAR</button><button class="accent">AUTO-FILL</button></div>
+      </aside>
+    </div>
+    <div class="saved-drawer" id="drawer"><div><b>SAVED DECKS</b><button class="icon-btn" id="closeDrawer">×</button></div><button>Ashen Ascendancy <small>27 cards · edited today</small></button><button>Stormbound Oath <small>30 cards · edited Oct 12</small></button><button>Graveyard Protocol <small>24 cards · edited Oct 02</small></div>
+  </main>
+  <script>
+    const root=document.documentElement; const panel=document.querySelector('#deckPanel');
+    document.querySelectorAll('[data-state]').forEach(btn=>btn.onclick=()=>{document.querySelectorAll('[data-state]').forEach(b=>b.classList.remove('is-active'));btn.classList.add('is-active');panel.dataset.state=btn.dataset.state;const count=document.querySelector('#deckCount'), v=document.querySelector('#validation'); if(btn.dataset.state==='empty'){count.textContent='0 / 30';v.innerHTML='<span class="status-dot"></span><span>ADD CARDS TO BEGIN</span>'}else if(btn.dataset.state==='invalid'){count.textContent='27 / 30';v.innerHTML='<span class="status-dot"></span><span>NEEDS 3 MORE CARDS</span>'}else if(btn.dataset.state==='over'){count.textContent='34 / 30';v.innerHTML='<span class="status-dot"></span><span>OVER COPY LIMIT — REMOVE 4 CARDS</span>'}else{count.textContent='27 / 30';v.innerHTML='<span class="status-dot"></span><span>DECK READY FOR DUEL</span>'}});
+    document.querySelectorAll('.collection-card:not(.locked)').forEach(card=>{card.addEventListener('mouseenter',()=>{document.querySelector('#preview').innerHTML='<img src="'+card.querySelector('img').src+'" alt="'+card.dataset.name+' preview" /><div><b>'+card.dataset.name+'</b><small>DRAGON · '+card.dataset.copies+' OWNED</small></div>'});card.addEventListener('dragstart',e=>e.dataTransfer.setData('text/plain',card.dataset.name))});
+    document.querySelector('#deckList').addEventListener('dragover',e=>e.preventDefault()); document.querySelector('#deckList').addEventListener('drop',e=>{e.preventDefault();document.querySelector('#validation').className='validation invalid';document.querySelector('#validation').innerHTML='<span class="status-dot"></span><span>ADDED '+e.dataTransfer.getData('text/plain').toUpperCase()+'</span>'});
+    document.querySelector('#savedDecks').onclick=()=>document.querySelector('#drawer').classList.add('open'); document.querySelector('#closeDrawer').onclick=()=>document.querySelector('#drawer').classList.remove('open');
+  </script>
+</body>
+</html>
